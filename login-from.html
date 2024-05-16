@@ -21,482 +21,386 @@
 
     <script src="https://kit.fontawesome.com/9f57283aa3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="style.css">
 
     <title>login-form</title>
 
-    <!-- <style>
-        .content-wrapper {
-            padding: 50px 124px;
-        }
-
-        h1.title {
-            font-size: 38px;
-            font-weight: 700;
-        }
-
-        h1.title span {
-            font-size: 38px;
-            color: #000;
-            font-weight: 400;
-
-        }
-
-        .title-wrapper p {
-            font-size: 16px;
-            font-weight: 500;
-            color: #b9c3c4;
-        }
-
-        .social-logo {
-            width: 20px;
-            height: 20px;
-            display: inline-block;
-        }
-
-        p.continue {
-            font-size: 16px;
-            font-weight: 500;
-            color: #979a9b;
-            text-align: center;
-            position: relative;
-        }
-
-        p.continue::after {
-            content: "";
-            position: absolute;
-            top: 12px;
-            right: -2px;
-            width: 32%;
-            height: 2px;
-            background-color: #979a9b;
-        }
-
-        p.continue::before {
-            content: "";
-            position: absolute;
-            top: 12px;
-            left: -2px;
-            width: 32%;
-            height: 2px;
-            background-color: #979a9b;
-        }
-
-        .social-section {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0px;
-        }
-
-        .input-wrapper {
-            margin-bottom: 20px;
-        }
-
-        .social-btn {
-            background-color: transparent;
-            border: 1px solid #0000006e;
-            width: 200px;
-            height: 55px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        label.email-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #b3b6ac;
-            padding-bottom: 8px;
-        }
-
-        input#email-input {
-            width: 100%;
-            height: 50px;
-            border-radius: 10px;
-            border: 1px solid #d1d3ca;
-            padding: 10px 10px;
-            background-color: #f6f6f4;
-            font-size: 16px;
-            font-weight: 600;
-            color: #b3b6ac;
-        }
-
-        .user-box {
-            width: 100%;
-            height: 50px;
-            border-radius: 10px;
-            border: 1px solid #d1d3ca;
-            background-color: #f6f6f4;
-            font-size: 18px;
-            font-weight: 600;
-            position: relative;
-        }
-
-        input#password {
-            border: 0px;
-            background: transparent;
-            height: 50px;
-            border-radius: 10px;
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #b3b6ac;
-        }
-
-        span.password-toggle-icon {
-            position: absolute;
-            right: 15px;
-            top: 12px;
-            z-index: 1;
-        }
-
-        label.pass-label {
-            font-size: 16px;
-            font-weight: 600;
-            color: #b3b6ac;
-            padding-bottom: 8px;
-        }
-
-        .forgot {
-            text-align: right;
-        }
-
-        .forgot a {
-            font-size: 16px;
-            font-weight: 600;
-            color: #000;
-            padding-bottom: 8px;
-            text-decoration: none;
-            text-transform: capitalize;
-        }
-
-        .login {
-            padding: 40px 0px;
-        }
-
-        .login a {
-            padding: 15px 185px;
-            background-color: #000;
-            border-radius: 10px;
-            /* width: 100% !important; */
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .sign-up {
-            text-align: center;
-        }
-
-        .sign-up p {
-            font-size: 16px;
-            font-weight: 500;
-            color: #979a9b;
-        }
-
-        .sign-up p a {
-            font-size: 18px;
-            font-weight: 500;
-            color: #000000;
-            text-decoration: none;
-        }
-
-        .main-slider-wrp {
-
-        }
-
-        .fashon-card {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 100px 50px 0px 50px;
-            justify-content: center;
-            text-align: center;
-        }
-        .fashon-contnet {
-            display: flex;
-    flex-wrap: wrap;
+    <style>
+        :root{
+    --primary-color: #f90b4f;
+    --secondary-color: #0097e6;
+    --secondary-over-dark-color: #f7df2f;
+    
+    --white-color: #ffffff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7cB99a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
+    
+  }
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  *,::before,::after{
+    box-sizing: border-box;
+  }
+  
+  body{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+  }
+  a{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn{
+    background: var(--primary-color);
+    color: #ffffff;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .3s;
+}
+.btn:hover{
+    background-color: var(--secondary-over-dark-color);
+    color: var(--white-color);
+}
+.login-form-section{
+    width: 70%;
+    margin: 1% auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.login-form-section .form-container{
+    margin: auto;
+}
+.login-form-section .form-content{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-        }
-        .fashon-contnet p {
-            color: #fff;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-    }
-
-    .swiper-slide  {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .swiper-button-next {
-    display: none;
+    gap: 10em;
 }
-
-.swiper-button-prev.swiper-button-disabled {
-    display: none;
+.login-form-section .form-content .left{
+    flex: 1;
+    flex-basis: 300px;
 }
-.swiper-button-prev {
-    display: none;
+.login-form-section .form-content .left .left-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: start;
+    align-items: start;
+    width: 100%;
 }
-
-
-.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 100px);
-    z-index: 1;
-}
-
-span.swiper-pagination-bullet {
-    color: #fff;
-    width: 35px;
-    height: 5px;
-    border-radius: 5px;
+.login-form-section .form-content .left .left-content .languase{
+    display: flex;
+    align-items: center;
+    gap: .5em;
     cursor: pointer;
 }
-
-span.swiper-pagination-bullet.swiper-pagination-bullet{
-    background-color: #fff;
+.login-form-section .form-content .left .left-content .languase select{
+    border: none;
+    outline: none;
 }
-/* // ++++++++++++++++++++++++++++++++++++
-//            risponsive
-// ++++++++++++++++++++++++++++++++++++ */
-@media  (max-width: 1024px) {
-    .content-wrapper {
-    padding: 30px 30px;
+.login-form-section .form-content .left .left-content .languase .img-wapper{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    overflow: hidden;
 }
-}
-/* // ++++++++++++++++++++++++++++++++++++
-//            risponsive
-// ++++++++++++++++++++++++++++++++++++ */
-@media  (max-width: 1024px) {
-    .login {
-    text-align: center;
-}
-}
-/* // ++++++++++++++++++++++++++++++++++++
-//            risponsive
-// ++++++++++++++++++++++++++++++++++++ */
-@media  (max-width: 420px) {
-    h1.title {
-    font-size: 30px;
+.login-form-section .form-content .left .left-content .languase .img-wapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-h1.title span {
-    font-size: 30px;
+.login-form-section .form-content .left .left-content .top-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+}
+.login-form-section .form-content .left .left-content .top-content .header-logo{
+    display: none;
 }
 
-.title-wrapper p {
-    font-size: 14px;
+
+.login-form-section .form-content .left .left-content .main-content{
+    margin-top: 50px;
+    width: 100%;
+}
+.login-form-section .form-content .left .left-content .main-content h1{
+    font-size: 45px;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
-.social-btn {
-    width: 170px;
+.login-form-section .form-content .left .left-content .main-content .form-section{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
-p.continue::before {
-    width: 30%;
+.login-form-section .form-content .left .left-content .main-content .form-section .row label{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input{
+    display: flex;
+    align-items: center;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input .input-icon{
+    width: 40px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+    border-top-right-radius: 5px;
+    color: #ddd;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input .password-icon{
+    width: 40px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    border-top-right-radius: 5px;
+    color: #ddd;
+    cursor: pointer;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input input{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ddd;
+    border-left: none;
+    padding: 0 10px;
+    padding-left: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input .password{
+    border-right: none !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .input input:focus{
+    outline: none;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row a{
+    text-decoration: none;
+    font-weight: 500;
+    display: block;
+    color:  var(--primary-color);
+    width: fit-content;
+    margin-left: auto;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .anoter-login{
+    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    position: relative;
+}
+.login-form-section .form-content .left .left-content .main-content .form-section .row .anoter-login .another-login-text{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height: 25px;
+    padding: 0 10px;
+    background-color: var(--white-color);
+}   
+.login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn{
+    width: 100%;
+    background-color: var(--border-color);
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+}   
+.login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn .social-media-icon{
+    color: var(--secondary-color);
+    font-size: 18px;
+}   
+.login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn .social-media-text{
+    color: var(--dark-color) !important;
+}   
+.login-form-section .form-content .left .left-content .footer-content{
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-a;
+}   
+.login-form-section .form-content .left .left-content .footer-content p{
+    flex: 1;
+}   
+.login-form-section .form-content .left .left-content .footer-content p a{
+    color: var(--secondary-color);
+}   
+.login-form-section .form-content .left .left-content .footer-content a{
+    flex: 1;
+    text-align: right;
+}   
+
+
+.login-form-section .form-content .right{
+    flex: 1;
+    flex-basis: 300px;
+    background-image:url(./images/login-page.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.login-form-section .form-content .right .right-content{
+    position: absolute;
+    width: 100%;
+    left: 20px;
+    bottom: 20px;
+    padding-right: 10px;
+}
+.login-form-section .form-content .right .right-content img{
+    height: 30px;
+    margin-bottom: 20px;
+}
+.login-form-section .form-content .right .right-content p{
+    font-weight: 500;
+    color: var(--white-color);
 }
 
-p.continue::after {
-    width: 30%;
-}
 
-.login a {
-    padding: 15px 150px;
+@media only screen and (min-width: 992px) and (max-width: 1399px) {
+.login-form-section{
+    width: 100% ;
+    margin: 0 auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 50px;
 }
-
-.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: var(--swiper-pagination-bottom, 50px);
 }
-}
-/* // ++++++++++++++++++++++++++++++++++++
-//            risponsive
-// ++++++++++++++++++++++++++++++++++++ */
-@media  (max-width: 375px) {
-    .social-btn {
-        width: 150px;
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .login-form-section{
+        width: 100% ;
+        margin: 0 auto;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 50px;
     }
-    .login a {
-        padding: 15px 130px;
+    .login-form-section .form-content{
+        gap: 5em;
     }
-    p.continue::before {
-        width: 28%;
-    }
-    p.continue::after {
-        width: 28%;
+    .login-form-section .form-content .left .left-content .main-content h1{
+        font-size: 25px;
     }
 }
-/* // ++++++++++++++++++++++++++++++++++++
-//            risponsive
-// ++++++++++++++++++++++++++++++++++++ */
-@media  (max-width: 320px) {
-    h1.title {
-    font-size: 25px;
-}
-
-h1.title span {
-    font-size: 25px;
-}
-
-.title-wrapper p {
-    font-size: 12px;
-}
-
-.social-btn {
-    width: 125px;
-}
-p.continue::before {
-    width: 22%;
-}
-
-p.continue::after {
-    width: 22%;
-}
-.login a {
-        padding: 15px 100px;
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .login-form-section{
+        width: 100% ;
+        margin: 0 auto;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 50px;
+    }
+    .login-form-section .form-content{
+        gap: 5em;
+    }
+    .login-form-section .form-content .left .left-content .main-content h1{
+        font-size: 25px;
+    }
+    .login-form-section .form-content .right{
+        display: none;
     }
 }
-
-    </style> -->
+@media (max-width: 575px) {
+    .login-form-section .form-content .left .left-content .top-content .header-logo{
+        display: block;
+    }
+    .login-form-section .form-content .left .left-content .top-content .header-logo img{
+        height: 20px;
+    }
+    .login-form-section{
+        width: 100% ;
+        margin: 0 auto;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: 20px;
+    }
+    .login-form-section .form-content{
+        gap: 5em;
+    }
+    .login-form-section .form-content .left .left-content .main-content h1{
+        font-size: 25px;
+    }
+    .login-form-section .form-content .right{
+        display: none;
+    }
+    .row button{
+        width: 96%;
+        margin: auto;
+    }
+    .row .social-media-btn{
+        width: 96% !important;
+        margin: auto;
+    }
+    .login-form-section .form-content .left .left-content .footer-content{
+        margin-top: 55px;
+    }  
+    .login-form-section .form-content .left .left-content .footer-content p, .footer-content a{
+        font-size: 14px;
+    }  
+}
+    </style>
 </head>
 
-<body>
-    <!-- <section class="form-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 p-0">
-                    <div class="content-wrapper">
-                        <div class="title-wrapper">
-                            <h1 class="title"><span>Hello,</span>Welcome Back!</h1>
-                            <p>We're happy to see you again. let's Stay ahead of the game</p>
-                        </div>
-                        <div class="login-container">
-                            <div class="social-section">
-                                <button class="social-btn">
-                                    <span class="social-logo-wrapper"><img class="social-logo"
-                                            src="images/google-logo.svg" alt="Google logo"></span><span
-                                        class="social-text">Google</span>
-                                </button>
-
-                                <button class="social-btn"><span class="social-logo-wrapper"><img class="social-logo"
-                                            src="images/apple-logo.svg" alt="Apple logo"></span><span
-                                        class="social-text">Apple</span>
-                                </button>
-                            </div>
-                            <p class="continue">Or Continue With</p>
-                            <div class="input-wrapper">
-                                <label class="email-label" for="email-input">Email</label><br>
-                                <input class="email-input" inputmode="email" type="email" id="email-input" name="email"
-                                    autocomplete="username" autocapitalize="none" spellcheck="false" required=""
-                                    placeholder="Email">
-                            </div>
-                            <label class="pass-label">Password</label>
-                            <div class="user-box">
-                                <input type="password" name="" id="password" required="" placeholder="Password">
-                                <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
-                            </div>
-                            <div class="forgot">
-                                <a href="#">forgot password</a>
-                            </div>
-                            <div class="login">
-                                <a href="">LOGIN</a>
-                            </div>
-                            <div class="sign-up">
-                                <p>Don't have an account?<a href="#">Sign up for free</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 p-0">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                          <div data-history="1" class="swiper-slide">
-                            <div class="fashon-card" style="background-image: url('images/slides-img.jpg');">
-                                <div class="fashon-contnet">
-                                    <img src="images/main-logo.png" alt="">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
-                                </div>
-                            </div>
-                          </div>
-                          <div data-history="Slide 2" class="swiper-slide">
-                            <div class="fashon-card" style="background-image: url('images/slides-img.jpg');">
-                                <div class="fashon-contnet">
-                                    <img src="images/main-logo.png" alt="">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
-                                </div>
-                            </div>
-                          </div>
-                          <div data-history="3" class="swiper-slide">
-                            <div class="fashon-card" style="background-image: url('images/slides-img.jpg');">
-                                <div class="fashon-contnet">
-                                    <img src="images/main-logo.png" alt="">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
-                                </div>
-                            </div>
-                          </div>
-                          <div data-history="Slide 4" class="swiper-slide">
-                            <div class="fashon-card" style="background-image: url('images/slides-img.jpg');">
-                                <div class="fashon-contnet">
-                                    <img src="images/main-logo.png" alt="">
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                                        unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                    </p>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+<body>   
     
-    
-    <section class="form-section">
+    <section class="login-form-section">
         <div class="form-container">
             <div class="form-content">
                 <div class="left">
                     <div class="left-content">
-                        <div class="languase">
-                            <div class="img-wapper">
-                                <img src="./images/languase.jpg" alt="">
+                        <div class="top-content">
+                            <div class="header-logo">
+                                <img src="./images/logo.jpg" alt="">
                             </div>
-                            <span>English(US)</span>
-                            <span><i class="fa-solid fa-chevron-down"></i></span>
+                            <div class="languase">
+                                <div class="img-wapper">
+                                    <img src="./images/languase.jpg" alt="">
+                                </div>
+                                <!-- <span>English(US)</span>
+                                <span><i class="fa-solid fa-chevron-down"></i></span> -->
+                                <select name="languase" id="">
+                                    <option value="">English</option>
+                                    <option value="">Hindi</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="main-content">
                             <h1>Connect with friends!</h1>
@@ -517,15 +421,21 @@ p.continue::after {
                                     <label for="">Passwrod</label>
                                     <div class="input">
                                         <div class="input-icon">
-                                            <i class="fa-regular fa-envelope"></i>
+                                            <i class="fa-solid fa-key"></i>
                                         </div>
-                                        <input type="password" name="password" id="password" placeholder="Enter Password">
-                                        <a href="">Forgot Password?</a>
+                                        <input class="password" type="password" name="password" id="password" placeholder="Enter Password">
+                                        <div class="password-icon password-toggle-icon">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    <button>Login</button>
+                                    <a href="">Forgot Password?</a>
+                                </div>
+
+                                <div class="row">
+                                    <button class="btn">Login</button>
                                 </div>
 
                                 <div class="row">
@@ -537,16 +447,16 @@ p.continue::after {
                                 </div>
 
                                 <div class="row">
-                                    <a href="">
-                                        <span><i class="fa-brands fa-facebook"></i></span>
-                                        <span>Facebook</span>
+                                    <a href="" class="btn social-media-btn">
+                                        <span><i class="fa-brands fa-facebook social-media-icon"></i></span>
+                                        <span class="social-media-text">Facebook</span>
                                     </a>
                                 </div>
 
                                 <div class="row">
-                                    <a href="">
-                                        <span><i class="fa-brands fa-google"></i></span>
-                                        <span>Google</span>
+                                    <a href="" class="btn social-media-btn">
+                                        <span><i class="fa-brands fa-google social-media-icon"></i></span>
+                                        <span class="social-media-text">Google</span>
                                     </a>
                                 </div>
                             </div>
@@ -561,7 +471,10 @@ p.continue::after {
                     </div>
                 </div>
                 <div class="right">
-
+                    <div class="right-content">
+                        <img src="./images/logo.jpg" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad atque dignissimos id labore expedita assumenda repellat? Eligendi, excepturi accusamus.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -593,23 +506,6 @@ p.continue::after {
                 togglePassword.classList.add("fa-eye");
             }
         });
-
-
-       var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 50,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      history: {
-        key: "slide",
-      },
-    });
     </script>
 
 </body>
