@@ -32,7 +32,7 @@
     
     --white-color: #ffffff;
     --light-bg-color: #f2f3f5;
-    --light-text-color: #7cB99a;
+    --light-text-color: #40ddbf;
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
     
@@ -50,40 +50,52 @@
     font-weight: 400;
     line-height: 1.4;
     color: var(--dark-color);
-    background-color: var(--white-color);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
   }
   a{
     text-decoration: none;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+    transition: .3s;
+  }
+  a:hover{
+    color: var(--light-text-color) !important;
   }
   .btn{
     background: var(--primary-color);
     color: #ffffff;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     border: 0;
+    border: 1px solid transparent;
     border-radius: 50px;
     letter-spacing: 3px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     cursor: pointer;
     text-decoration: none;
     transition: all .3s;
 }
 .btn:hover{
-    background-color: var(--secondary-over-dark-color);
-    color: var(--white-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 .login-form-section{
     width: 70%;
-    margin: 1% auto;
+    margin-top: 10px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     padding: 50px;
     border-radius: 20px;
     overflow: hidden;
+    background-color: var(--white-color);
 }
 .login-form-section .form-container{
     margin: auto;
@@ -141,7 +153,7 @@
 
 
 .login-form-section .form-content .left .left-content .main-content{
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
 }
 .login-form-section .form-content .left .left-content .main-content h1{
@@ -169,21 +181,20 @@
 }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .input .input-icon{
     width: 40px;
-    height: 45px;
-    line-height: 45px;
+    height: 50px;
+    line-height: 50px;
     font-size: 20px;
     padding: 0 10px;
     border: 1px solid #ddd;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     border-right: none;
-    border-top-right-radius: 5px;
     color: #ddd;
 }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .input .password-icon{
     width: 40px;
-    height: 45px;
-    line-height: 45px;
+    height: 50px;
+    line-height: 50px;
     font-size: 20px;
     padding: 0 10px;
     border: 1px solid #ddd;
@@ -196,7 +207,7 @@
 }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .input input{
     width: 100%;
-    height: 45px;
+    height: 50px;
     border: 1px solid #ddd;
     border-left: none;
     padding: 0 10px;
@@ -216,7 +227,7 @@
     text-decoration: none;
     font-weight: 500;
     display: block;
-    color:  var(--primary-color);
+    color:  var(--secondary-color);
     width: fit-content;
     margin-left: auto;
 }
@@ -224,7 +235,7 @@
     margin: 20px 0;
     width: 100%;
     height: 1px;
-    background-color: var(--border-color);
+    background-color: var(--secondary-over-dark-color);
     position: relative;
 }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .anoter-login .another-login-text{
@@ -246,6 +257,14 @@
     align-items: center;
     gap: .5em;
 }   
+.row button{
+        width: 96%;
+        margin: auto;
+    }
+    .row .social-media-btn{
+        width: 96% !important;
+        margin: auto;
+    }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn .social-media-icon{
     color: var(--secondary-color);
     font-size: 18px;
@@ -255,20 +274,18 @@
 }   
 .login-form-section .form-content .left .left-content .footer-content{
     width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-a;
+    margin-top: 50px;
+    text-align: center;
 }   
 .login-form-section .form-content .left .left-content .footer-content p{
-    flex: 1;
-}   
+    font-size: 14px;
+}
 .login-form-section .form-content .left .left-content .footer-content p a{
-    color: var(--secondary-color);
-}   
-.login-form-section .form-content .left .left-content .footer-content a{
-    flex: 1;
-    text-align: right;
+    color: var(--dark-color);
+}
+.login-form-section .form-content .left .left-content .footer-content p a:hover{
+    text-decoration: underline;
+    color: var(--dark-color) !important;
 }   
 
 
@@ -291,16 +308,20 @@
     padding-right: 10px;
 }
 .login-form-section .form-content .right .right-content img{
-    height: 30px;
+    height: 80px;
     margin-bottom: 20px;
 }
 .login-form-section .form-content .right .right-content p{
     font-weight: 500;
     color: var(--white-color);
+    padding-right: 25px;
 }
 
 
 @media only screen and (min-width: 992px) and (max-width: 1399px) {
+    body{
+    background-color: var(--white-color);
+  }
 .login-form-section{
     width: 100% ;
     margin: 0 auto;
@@ -309,6 +330,9 @@
 }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    body{
+    background-color: var(--white-color);
+  }
     .login-form-section{
         width: 100% ;
         margin: 0 auto;
@@ -323,6 +347,9 @@
     }
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+    body{
+    background-color: var(--white-color);
+  }
     .login-form-section{
         width: 100% ;
         margin: 0 auto;
@@ -340,11 +367,14 @@
     }
 }
 @media (max-width: 575px) {
+    body{
+    background-color: var(--white-color);
+  }
     .login-form-section .form-content .left .left-content .top-content .header-logo{
         display: block;
     }
     .login-form-section .form-content .left .left-content .top-content .header-logo img{
-        height: 20px;
+        height: 50px;
     }
     .login-form-section{
         width: 100% ;
@@ -372,7 +402,7 @@
     .login-form-section .form-content .left .left-content .footer-content{
         margin-top: 55px;
     }  
-    .login-form-section .form-content .left .left-content .footer-content p, .footer-content a{
+    .login-form-section .form-content .left .left-content .footer-content p{
         font-size: 14px;
     }  
 }
@@ -388,7 +418,7 @@
                     <div class="left-content">
                         <div class="top-content">
                             <div class="header-logo">
-                                <img src="./images/logo.jpg" alt="">
+                                <img src="./images/mainlogo_png.png" alt="">
                             </div>
                             <div class="languase">
                                 <div class="img-wapper">
@@ -399,6 +429,11 @@
                                 <select name="languase" id="">
                                     <option value="">English</option>
                                     <option value="">Hindi</option>
+                                    <option value="">Arabic</option>
+                                    <option value="">Bengali</option>
+                                    <option value="">Chinese</option>
+                                    <option value="">Chinese</option>
+                                    <option value="">Russian</option>
                                 </select>
                             </div>
                         </div>
@@ -459,20 +494,22 @@
                                         <span class="social-media-text">Google</span>
                                     </a>
                                 </div>
+
+                                <div class="row">
+                                    <a href="" class="btn social-media-btn">
+                                        <span class="social-media-text">Sign up</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="footer-content">
-                            <p>New to Nebula? <a href="">Sign Up Here!</a></p>
-                            <a href="">
-                                <span><i class="fa-solid fa-life-ring"></i></span>
-                                <span>Need Helps?</span>
-                            </a>
+                            <p>© 2024 Mr.Ponneri+  •  <a href="">Terms of Use</a>  •  <a href="">Privacy Policy</a>  •  <a href="">Contact Us</a>  •  <a href="">About</a>  •  <a href="">Blog</a>  •  <a href="">Privacy Policy</a></p>
                         </div>
                     </div>
                 </div>
                 <div class="right">
                     <div class="right-content">
-                        <img src="./images/logo.jpg" alt="">
+                        <img src="./images/1_Transparent_Image.png" alt="">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad atque dignissimos id labore expedita assumenda repellat? Eligendi, excepturi accusamus.</p>
                     </div>
                 </div>
