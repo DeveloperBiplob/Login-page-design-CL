@@ -161,6 +161,9 @@
     font-weight: 700;
     color: var(--primary-color);
 }
+.login-form-section .form-content .left .left-content .main-content p{
+    color: #333 !important;
+}
 
 .login-form-section .form-content .left .left-content .main-content .form-section{
     width: 100%;
@@ -174,6 +177,7 @@
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 5px;
+    color: #333 !important;
 }
 .login-form-section .form-content .left .left-content .main-content .form-section .row .input{
     display: flex;
@@ -227,7 +231,7 @@
     text-decoration: none;
     font-weight: 500;
     display: block;
-    color:  var(--secondary-color);
+    color:  var(--primary-color);
     width: fit-content;
     margin-left: auto;
 }
@@ -246,6 +250,7 @@
     width: fit-content;
     height: 25px;
     padding: 0 10px;
+    color: #333 !important;
     background-color: var(--white-color);
 }   
 .login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn{
@@ -258,13 +263,21 @@
     gap: .5em;
 }   
 .row button{
-        width: 96%;
-        margin: auto;
-    }
-    .row .social-media-btn{
-        width: 96% !important;
-        margin: auto;
-    }
+    width: 96%;
+    margin: auto;
+}
+.row .social-media-btn{
+    width: 96% !important;
+    margin: auto;
+}
+.signup-btn{
+    background-color: var(--secondary-over-dark-color) !important;
+}
+.signup-btn:hover{
+    background-color: transparent !important;
+    border: 1px solid var(--secondary-over-dark-color) !important;
+    color: var(--secondary-over-dark-color) !important;
+}
 .login-form-section .form-content .left .left-content .main-content .form-section .row .social-media-btn .social-media-icon{
     color: var(--secondary-color);
     font-size: 18px;
@@ -472,6 +485,12 @@
                                 <div class="row">
                                     <button class="btn">Login</button>
                                 </div>
+                                
+                                <div class="row">
+                                    <a href="" class="btn social-media-btn signup-btn">
+                                        <span class="social-media-text">Sign up</span>
+                                    </a>
+                                </div>
 
                                 <div class="row">
                                     <div class="anoter-login">
@@ -495,11 +514,6 @@
                                     </a>
                                 </div>
 
-                                <div class="row">
-                                    <a href="" class="btn social-media-btn">
-                                        <span class="social-media-text">Sign up</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                         <div class="footer-content">
